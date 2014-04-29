@@ -6,10 +6,11 @@ import webbrowser
 
 class MovieInformation():
 
-    def __init__(self, movie_name, movie_description, movie_video):
-        self.name = movie_name
+    def __init__(self, movie_name, movie_description, movie_picture, movie_video):
+        self.title = movie_name
         self.desc = movie_description
-        self.url = "http://www." + movie_video + ".com"
+        self.poster_image_url = movie_picture
+        self.trailer_youtube_url = movie_video
 
     def play_trailer(self):
         webbrowser.open(self.url)
